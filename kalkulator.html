@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Exercise 2</title>
+</head>
+	<div class="col-md-6">
+<body>
+	<style type="text/css">
+		hr {
+			color: white;
+			margin-top: 10px;
+				}
+		h1	{
+			color: white;
+		} 
+		input{
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 20px;
+			margin-right: 20px;
+			}
+		#name{
+			width: 250px;
+		}
+		}
+		#hasil{
+			width: 290px;
+		}
+	</style>
+
+	<table bgcolor="gray" align="center" > 
+		<tr>
+			<td><h1 align="center">Kalkulator</h1><hr></td>
+			
+		</tr>
+			
+		<tr>
+        <td colspan=6 class="text-center"></td>
+    </tr>
+   
+    <tr>
+        <td colspan=6>
+
+        <form name="Calc">
+    
+        <tr>
+            <td>
+                <input  type="text" name="Input" Size="25" id="name">
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="one" value=" 1 " OnClick="Calc.Input.value += '1'">
+                <input type="button" name="two" value=" 2 " OnCLick="Calc.Input.value += '2'">
+                <input type="button" name="three" value=" 3 " OnClick="Calc.Input.value += '3'">
+                <input type="button" name="plus" value=" + " OnClick="Calc.Input.value += ' + '">
+                <br>
+                <input type="button" name="four" value=" 4 " OnClick="Calc.Input.value += '4'">
+                <input type="button" name="five" value=" 5 " OnCLick="Calc.Input.value += '5'">
+                <input type="button" name="six" value=" 6 " OnClick="Calc.Input.value += '6'">
+                <input type="button" name="minus" value=" - " OnClick="Calc.Input.value += ' - '">
+                <br>
+                <input type="button" name="seven" value=" 7 " OnClick="Calc.Input.value += '7'">
+                <input type="button" name="eight" value=" 8 " OnCLick="Calc.Input.value += '8'">
+                <input type="button" name="nine" value=" 9 " OnClick="Calc.Input.value += '9'">
+                <input type="button" name="times" value=" x " OnClick="Calc.Input.value += ' * '">
+                <br>
+                <input type="button" name="clear" value=" c " OnClick="Calc.Input.value = ''">
+                <input type="button" name="zero" value=" 0 " OnClick="Calc.Input.value += '0'">
+                <input type="button" name="DoIt" value=" = " OnClick="Calc.Input.value = eval(Calc.Input.value)">
+                <input type="button" name="div" value=" / " OnClick="Calc.Input.value += ' / '">
+                <br>
+            </td>
+        </td>
+   
+</form>
+       <!--      <form>
+                <input class="form-control" name="nilai1" value="0" enable>
+                <input class="form-control" name="nilai2" value="0" enable><br><br>
+                <input  class="form-control" name="hasil" value="0" disabled id="hasil"> -->
+         	<!-- <form name="kalkulator">
+					 <input type="text"name="inputangka1"placeholder="0">
+					 <input type="text"name="inputangka2"placeholder="0">
+					 <input type="text" name="hasilnya" disabled>
+		 		
+					 <input type="button"value="+"onclick="hasil(1)"> 
+					 <input type="button"value="-"onclick="hasil(2)">
+					 <input type="button"value="/"onclick="hasil(3)">
+					 <input type="button"value="*"onclick="hasil(4)">
+					 <input type="reset"value="Hapus">
+
+					 
+
+			</form> -->
+
+
+        </td>
+    </tr>
+      <tr>
+        <!-- <td class="col-md-2"><input class="btn btn-default btn-block" type="button" value="  +  " onClick="addChar(this.form.display, '+')"></td> -->
+	</table>
+		<script language="javascript">
+			function hasil(aritmatika){
+				var inputangka1=parseFloat(document.ffrom.inputangka1.value);
+				var inputangka2=parseFloat(document.ffrom.inputangka2.value);
+					switch(aritmatika){
+					 case 1: var hasilnya=inputangka1+inputangka2;break;
+					 case 2: var hasilnya=inputangka1-inputangka2;break;
+					 case 3: var hasilnya=inputangka1/inputangka2;break;
+					 case 4: var hasilnya=inputangka1*inputangka2;break;
+									}
+			console.log(hasilnya);
+			alert("Hasilnya adalah "+hasilnya);
+							hasilnya= hasil;		}
+		</script>
+
+</body>
+</html>
